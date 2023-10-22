@@ -11,7 +11,7 @@
     "plugin:react/recommended",
     "plugin:prettier/recommended"
   ],
-  "plugins": ["react", "prettier", "react-hooks", "jsx-a11y"],
+  "plugins": ["react", "prettier", "react-hooks", "jsx-a11y", "import"],
   "parserOptions": {
     "ecmaVersion": "latest",
     "sourceType": "module"
@@ -53,6 +53,28 @@
         "specialLink": ["to"]
       }
     ],
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          ["builtin", "external", "internal", "parent", "sibling", "index"]
+        ],
+        "pathGroups": [
+          {
+            "pattern": "react",
+            "group": "external",
+            "position": "before"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": ["react"],
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ],
+
     "prettier/prettier": ["error"]
   }
 }
