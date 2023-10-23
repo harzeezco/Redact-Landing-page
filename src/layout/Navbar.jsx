@@ -1,18 +1,19 @@
-import CurveSideNav from "../components/navigation/CurveSideNav";
 import redactLogo from "@/assets/Svg/redactLogo.svg";
+import Button from "@/components/globals/Button";
 import RegularList from "@/components/globals/RegularList";
 import Link from "@/components/navigation/Link";
 import Nav from "@/components/navigation/Nav";
+import NavToggler from "@/components/navigation/NavToggler";
 import { NAV_LINKS } from "@/lib/data";
 
 function Navbar() {
   return (
-    <header className="mx-auto flex max-w-[1070px] items-center justify-between px-5 py-14 md:flex-row">
-      <Link to="/">
+    <header className="mx-auto flex max-w-[1070px] items-center justify-between px-5 py-10 md:flex-row">
+      <Link to="/" noCustomization linkWithUnderline>
         <img src={redactLogo} alt="Logo" width="103" height="44" />
       </Link>
-      <nav className="hidden md:inline-block" role="navigation">
-        <ul className="flex items-center gap-x-14">
+      <nav className="hidden lg:inline-block" role="navigation">
+        <ul className="flex items-center gap-x-10">
           <RegularList
             resourceName="link"
             itemComponent={Nav}
@@ -21,12 +22,12 @@ function Navbar() {
         </ul>
       </nav>
 
-      <div className="hidden gap-x-8 md:inline-flex md:items-center">
-        <button type="button">sign in</button>
-        <button type="button">sign up</button>
+      <div className="hidden gap-x-6 lg:inline-flex lg:items-center">
+        <Button btnType="outline">Log in</Button>
+        <Button btnType="secondary">Sign up</Button>
       </div>
 
-      <CurveSideNav />
+      <NavToggler />
     </header>
   );
 }

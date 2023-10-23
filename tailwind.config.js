@@ -2,12 +2,10 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    fontSize: {
-      base: "62.5%",
-    },
     extend: {
       colors: {
-        colorGrayLight: "#60687D",
+        grayDark: "#1E2A39",
+        grayLight: "#60687D",
       },
     },
   },

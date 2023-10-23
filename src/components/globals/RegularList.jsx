@@ -14,7 +14,6 @@ RegularList.propTypes = {
   items: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
-      name: PropTypes.string.isRequired,
     }),
   ).isRequired,
   itemComponent: PropTypes.func.isRequired,

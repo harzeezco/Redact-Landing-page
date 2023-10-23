@@ -1,22 +1,21 @@
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useContext, useLayoutEffect, useRef } from "react";
+
+import { NavContext } from "../contexts/NavContext";
 import gsap from "gsap";
-import { useContext, useEffect, useLayoutEffect, useRef } from "react";
-import { SmallScreenContext } from "../Contexts/SmallScreenContext";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-const useBtnGsapScrollTrigger = () => {
+const useGsapScrollTrigger = () => {
   const button = useRef(null);
-  const { isActive, setIsActive } = useContext(SmallScreenContext);
-
-  useEffect(() => {
-    if (isActive) setIsActive(false);
-  }, []);
+  const { isActive, setIsActive } = useContext(NavContext);
 
   useLayoutEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth >= 868) {
+    function handleResize() {
+      let scrollTrigger;
+      const innerWidth = 1020;
+      if (window.innerWidth >= innerWidth) {
         gsap.registerPlugin(ScrollTrigger);
 
-        const scrollTrigger = ScrollTrigger.create({
+        scrollTrigger = ScrollTrigger.create({
           trigger: document.documentElement,
           start: 0,
           end: window.innerHeight,
@@ -36,12 +35,12 @@ const useBtnGsapScrollTrigger = () => {
             setIsActive(false);
           },
         });
-
-        return scrollTrigger;
       } else {
         button.current.style = "transform: scale(1)";
       }
-    };
+
+      return scrollTrigger;
+    }
 
     let scrollTrigger = handleResize();
 
@@ -58,9 +57,9 @@ const useBtnGsapScrollTrigger = () => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, [setIsActive]);
 
   return { button, isActive, setIsActive };
 };
 
-export default useBtnGsapScrollTrigger;
+export default useGsapScrollTrigger;

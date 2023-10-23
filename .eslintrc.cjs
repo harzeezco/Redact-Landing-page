@@ -32,6 +32,7 @@ module.exports = {
   rules: {
     quotes: ["error", "double"],
     "linebreak-style": "off",
+    "object-curly-newline": "off",
     "func-style": ["error", "declaration", { allowArrowFunctions: true }],
     "react-refresh/only-export-components": [
       "warn",
