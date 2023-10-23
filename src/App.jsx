@@ -1,4 +1,4 @@
-import LandingPage from "@/pages/LandingPage";
+import LandingPage from "@/page/LandingPage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
