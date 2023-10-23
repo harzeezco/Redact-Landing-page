@@ -1,11 +1,7 @@
 import HeroSection from "@/components/sections/HeroSection";
 
-const Main = () => {
-  return (
-    <>
-      <HeroSection />
-    </>
-  );
-};
+function Main() {
+  return <HeroSection />;
+}
 
 export default Main;

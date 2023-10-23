@@ -1,7 +1,7 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
 import LandingPage from "@/pages/LandingPage";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-const App = () => {
+function App() {
   return (
     <BrowserRouter>
       <Routes>
@@ -9,6 +9,6 @@ const App = () => {
       </Routes>
     </BrowserRouter>
   );
-};
+}
 
 export default App;

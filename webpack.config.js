@@ -18,8 +18,8 @@ module.exports = {
   },
   devServer: {
     contentBase: "./dist",
-    hot: true, // Enables Hot Module Replacement
-    overlay: true, // Shows a full-screen overlay in the browser when there are compiler errors or warnings
+    hot: true,
+    overlay: true,
   },
   resolve: {
     alias: {

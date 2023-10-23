@@ -1,8 +1,8 @@
-import Navbar from "@/layout/Navbar";
 import Footer from "@/layout/Footer";
 import Main from "@/layout/Main";
+import Navbar from "@/layout/Navbar";
 
-const LandingPage = () => {
+function LandingPage() {
   return (
     <div>
       <Navbar />
@@ -10,6 +10,6 @@ const LandingPage = () => {
       <Footer />
     </div>
   );
-};
+}
 
 export default LandingPage;
