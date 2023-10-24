@@ -24,7 +24,9 @@ function Navbar() {
 
       <div className="hidden gap-x-6 lg:inline-flex lg:items-center">
         <Button btnType="outline">Log in</Button>
-        <Button btnType="secondary">Sign up</Button>
+        <Button btnType="dark" background="#1E2A39">
+          Sign up
+        </Button>
       </div>
 
       <NavToggler />

@@ -1,20 +1,31 @@
+import mergeClasses from "../../lib/utils";
+
 function Button({
-  btnType = "secondary",
+  btnType = "primary",
   children = null,
   background = "#FFA654",
+  lg = false,
 }) {
   switch (btnType) {
     case "primary":
       return (
-        <button type="button" className="text-purple-950">
+        <button
+          type="button"
+          className={`rounded-[4px] px-6 text-lg font-semibold text-white ${
+            lg ? "pb-4 pt-3" : "pb-3 pt-2"
+          }`}
+          style={{ backgroundColor: background }}
+        >
           {children}
         </button>
       );
-    case "secondary":
+    case "dark":
       return (
         <button
           type="button"
-          className="rounded-[4px] px-6 pb-3 pt-2 text-lg font-semibold text-white"
+          className={`rounded-[4px] px-6 text-lg font-semibold text-white ${
+            lg ? "pb-4 pt-3" : "pb-3 pt-2"
+          }`}
           style={{ backgroundColor: background }}
         >
           {children}
@@ -24,13 +35,26 @@ function Button({
       return (
         <button
           type="button"
-          className="rounded-[4px] px-6 pb-3 pt-2 text-lg transition-all hover:bg-grayLight hover:text-white"
+          className={mergeClasses(
+            "flex items-center gap-3 rounded-[4px] px-6 pb-3 pt-2 text-lg font-semibold transition-all hover:bg-grayLight hover:text-white",
+            lg ? "pb-4 pt-3" : "pb-3 pt-2",
+          )}
+        >
+          {children}
+        </button>
+      );
+    case "pink":
+      return (
+        <button
+          type="button"
+          className="flex items-center gap-3 rounded-[4px] px-6 pb-3 pt-2 text-lg font-semibold transition-all hover:bg-grayLight hover:text-white"
+          style={{ backgroundColor: background }}
         >
           {children}
         </button>
       );
     default:
-      break;
+      return null;
   }
 }
 
