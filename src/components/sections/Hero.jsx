@@ -4,7 +4,7 @@ import videoSidNav from "@/assets/Png/videoSideNav.png";
 import playIcon from "@/assets/Svg/playIcon.svg";
 import Button from "@/components/global/Button";
 
-function HeroSection() {
+function Hero() {
   return (
     <div className="mx-auto grid max-w-[1070px] place-items-center gap-y-14 px-5 py-14 md:grid-cols-[1fr_1.2fr] md:flex-row">
       <div>
@@ -52,4 +52,4 @@ function HeroSection() {
   );
 }
 
-export default HeroSection;
+export default Hero;

@@ -49,7 +49,7 @@ function Button({
           type="button"
           className={mergeClasses(
             commonClassNames,
-            "text-lightPurple flex items-center pb-4 pt-3 text-sm font-medium transition-all",
+            "flex items-center pb-4 pt-3 text-sm font-medium text-lightPurple transition-all",
           )}
           style={{ backgroundColor: background }}
         >
