@@ -14,7 +14,7 @@ function Button({
       return (
         <button
           type="button"
-          className="text-lg rounded-[4px] px-6 pb-3 pt-2 font-semibold text-white"
+          className="rounded-[4px] px-6 pb-3 pt-2 text-lg font-semibold text-white"
           style={{ backgroundColor: background }}
         >
           {children}
@@ -24,7 +24,7 @@ function Button({
       return (
         <button
           type="button"
-          className="text-lg hover:bg-grayLight rounded-[4px] px-6 pb-3 pt-2 transition-all hover:text-white"
+          className="rounded-[4px] px-6 pb-3 pt-2 text-lg transition-all hover:bg-grayLight hover:text-white"
         >
           {children}
         </button>
