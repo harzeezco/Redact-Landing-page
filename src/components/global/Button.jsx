@@ -1,4 +1,4 @@
-import mergeClasses from "../../lib/utils";
+import mergeClasses from "@/lib/utils";
 
 function Button({
   btnType = "primary",
@@ -6,14 +6,16 @@ function Button({
   background = "#FFA654",
   lg = false,
 }) {
+  const commonClassNames = mergeClasses(
+    "rounded-[4px] px-6 text-lg font-semibold",
+    lg ? "pb-4 pt-3" : "pb-3 pt-2",
+  );
   switch (btnType) {
     case "primary":
       return (
         <button
           type="button"
-          className={`rounded-[4px] px-6 text-lg font-semibold text-white ${
-            lg ? "pb-4 pt-3" : "pb-3 pt-2"
-          }`}
+          className={mergeClasses(commonClassNames, "text-white")}
           style={{ backgroundColor: background }}
         >
           {children}
@@ -23,9 +25,7 @@ function Button({
       return (
         <button
           type="button"
-          className={`rounded-[4px] px-6 text-lg font-semibold text-white ${
-            lg ? "pb-4 pt-3" : "pb-3 pt-2"
-          }`}
+          className={mergeClasses(commonClassNames, "text-white")}
           style={{ backgroundColor: background }}
         >
           {children}
@@ -36,8 +36,8 @@ function Button({
         <button
           type="button"
           className={mergeClasses(
-            "flex items-center gap-3 rounded-[4px] px-6 pb-3 pt-2 text-lg font-semibold transition-all hover:bg-grayLight hover:text-white",
-            lg ? "pb-4 pt-3" : "pb-3 pt-2",
+            commonClassNames,
+            "flex items-center gap-3 font-semibold transition-all hover:bg-grayLight hover:text-white",
           )}
         >
           {children}
@@ -47,7 +47,10 @@ function Button({
       return (
         <button
           type="button"
-          className="flex items-center gap-3 rounded-[4px] px-6 pb-3 pt-2 text-lg font-semibold transition-all hover:bg-grayLight hover:text-white"
+          className={mergeClasses(
+            commonClassNames,
+            "text-lightPurple flex items-center pb-4 pt-3 text-sm font-medium transition-all",
+          )}
           style={{ backgroundColor: background }}
         >
           {children}

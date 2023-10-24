@@ -1,7 +1,8 @@
-import Button from "../global/Button";
+import arrow from "@/assets/Png/roundBgArrowIcon.png";
 import video from "@/assets/Png/video.png";
 import videoSidNav from "@/assets/Png/videoSideNav.png";
 import playIcon from "@/assets/Svg/playIcon.svg";
+import Button from "@/components/global/Button";
 
 function HeroSection() {
   return (
@@ -36,13 +37,15 @@ function HeroSection() {
             <img src={video} alt="video" height="364" width="100%" />
           </div>
         </div>
-        <div>
-          <Button background="#FED1D4" btnType="pink">
-            + Add music
-          </Button>
-          {/* <button>
-            <img src="" alt="" />
-          </button> */}
+        <div className="mr-8 text-right">
+          <div className="mr-16 flex justify-end">
+            <Button background="#FED1D4" btnType="pink">
+              + Add music
+            </Button>
+          </div>
+          <button type="button" className="-mt-8">
+            <img src={arrow} alt="arrow" />
+          </button>
         </div>
       </div>
     </div>

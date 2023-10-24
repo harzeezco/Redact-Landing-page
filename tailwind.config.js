@@ -9,7 +9,7 @@ export default {
       colors: {
         grayDark: "#1E2A39",
         grayLight: "#60687D",
-        deepBlue: "#917AEB",
+        lightPurple: "#917AEB",
       },
     },
   },
