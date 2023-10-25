@@ -3,10 +3,11 @@ import video from "@/assets/Png/video.png";
 import videoSidNav from "@/assets/Png/videoSideNav.png";
 import playIcon from "@/assets/Svg/playIcon.svg";
 import Button from "@/components/global/Button";
+import Container from "@/layout/Container";
 
 function Hero() {
   return (
-    <div className="mx-auto grid max-w-[1070px] place-items-center gap-y-14 px-5 py-14 md:grid-cols-[1fr_1.2fr] md:flex-row">
+    <Container className="grid place-items-center gap-y-14 md:grid-cols-[1fr_1.2fr]">
       <div>
         <h1 className="font-primary text-5xl font-bold leading-[56px]">
           Edit your
@@ -48,7 +49,7 @@ function Hero() {
           </button>
         </div>
       </div>
-    </div>
+    </Container>
   );
 }
 
