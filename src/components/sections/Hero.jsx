@@ -9,7 +9,7 @@ function Hero() {
   return (
     <Container className="grid place-items-center gap-y-14 md:grid-cols-[1fr_1.2fr]">
       <div>
-        <h1 className="font-primary text-5xl font-bold leading-[56px]">
+        <h1 className="text-5xl font-bold leading-[56px]">
           Edit your
           <br />
           videos with
