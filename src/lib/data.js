@@ -50,3 +50,26 @@ export const FEATURES = [
       "Add more personality to your content with free elements from our vast media library.",
   },
 ];
+
+export const FOOTER_NAVS = [
+  {
+    id: 0,
+    title: "Tools",
+    navs: ["Video Editor", "Subtitles", "Screen Recorder", "Video Compressor"],
+  },
+  {
+    id: 1,
+    title: "Create",
+    navs: ["Social Media Videos", "Business Videos", "Promo Videos"],
+  },
+  {
+    id: 2,
+    title: "Product",
+    navs: ["Pricing", "Enterprise", "YouTube Guides", "Blog"],
+  },
+  {
+    id: 0,
+    title: "Company",
+    navs: ["VCareers", "Affiliate", "Privacy", "Terms", "Security", "Cookies"],
+  },
+];

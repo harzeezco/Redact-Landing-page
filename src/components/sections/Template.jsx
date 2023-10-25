@@ -39,38 +39,40 @@ const TEMPLATES = [
 
 function Template() {
   return (
-    <Container>
-      <h1 className="font-primary text-1xl font-bold md:text-center md:text-4xl">
-        Thousands of templates
-      </h1>
+    <section>
+      <Container>
+        <h1 className="font-primary text-1xl font-bold md:text-center md:text-4xl">
+          Thousands of templates
+        </h1>
 
-      <div className="mt-5 grid grid-cols-3 place-items-center md:grid-cols-5 lg:grid-cols-9">
-        {TEMPLATES.map(({ title }) => (
-          <button type="button" key={title}>
-            {title}
-          </button>
-        ))}
-      </div>
+        <div className="mt-5 grid grid-cols-3 place-items-center md:grid-cols-5 lg:grid-cols-9">
+          {TEMPLATES.map(({ title }) => (
+            <button type="button" key={title}>
+              {title}
+            </button>
+          ))}
+        </div>
 
-      <div className="mt-16 grid grid-cols-2 items-center gap-3 md:grid-cols-4">
-        <div className="">
-          <img src={vid4} alt="" />
+        <div className="mt-16 grid grid-cols-2 items-center gap-3 md:grid-cols-4">
+          <div className="">
+            <img src={vid4} alt="" />
+          </div>
+          <div className="col-2">
+            <img src={vid6} alt="" className="pb-5" />
+            <img src={vid2} alt="" />
+          </div>
+          <img src={vid1} alt="" />
+          <div>
+            <img src={vid3} alt="" className="pb-5" />
+            <img src={vid5} alt="" />
+          </div>
         </div>
-        <div className="col-2">
-          <img src={vid6} alt="" className="pb-5" />
-          <img src={vid2} alt="" />
-        </div>
-        <img src={vid1} alt="" />
-        <div>
-          <img src={vid3} alt="" className="pb-5" />
-          <img src={vid5} alt="" />
-        </div>
-      </div>
 
-      <div className="mt-14 flex justify-center">
-        <Button btnType="primary">Create a video</Button>
-      </div>
-    </Container>
+        <div className="mt-14 flex justify-center">
+          <Button btnType="primary">Create a video</Button>
+        </div>
+      </Container>
+    </section>
   );
 }
 
