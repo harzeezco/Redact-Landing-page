@@ -6,7 +6,7 @@ import Container from "@/layout/Container";
 
 function Features() {
   return (
-    <Container className="mt-5 grid place-items-center gap-x-32 gap-y-14 md:grid-cols-2 md:gap-y-32">
+    <Container className="mt-5 grid place-items-center gap-x-32 gap-y-14 lg:grid-cols-2 lg:gap-y-32">
       <div>
         <h1 className="text-1xl font-bold md:text-4xl md:leading-[52px]">
           Rich, easy interactive
@@ -25,7 +25,7 @@ function Features() {
       <div className="order-last">
         <img src={card} alt="text search" height="457" width="570" />
       </div>
-      <div className="md:order-last">
+      <div className="lg:order-last">
         <h1 className="mb-10 font-primary text-1xl font-bold md:text-4xl md:leading-[52px]">
           Over a million royalty-free stock media
         </h1>

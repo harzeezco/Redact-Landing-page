@@ -11,9 +11,11 @@ export default {
         primary: ["Plus Jakarta Sans", "sans-serif"],
       },
       colors: {
+        fadeWhite: "#FDFDFD",
         grayDark: "#1E2A39",
         grayLight: "#60687D",
         lightPurple: "#917AEB",
+        deepPurple: "#250441",
       },
     },
   },

@@ -7,7 +7,7 @@ import Container from "@/layout/Container";
 
 function Hero() {
   return (
-    <Container className="grid place-items-center gap-y-14 md:grid-cols-[1fr_1.2fr]">
+    <Container className="grid place-items-center gap-y-14 lg:grid-cols-[1fr_1.2fr]">
       <div>
         <h1 className="text-5xl font-bold leading-[56px]">
           Edit your
@@ -31,7 +31,7 @@ function Hero() {
           </Button>
         </div>
       </div>
-      <div className="justify-self-end">
+      <div className="lg:justify-self-end">
         <div className="grid grid-cols-[54px_1fr] gap-x-4">
           <img src={videoSidNav} alt="video bars" height="340" width="54" />
           <div className="video-container relative">
