@@ -65,9 +65,9 @@
     transform: scaleX(1);
     transform-origin: bottom left;
   }
-
-  .video-container::before,
-  .video-container::after {
+  
+  .common::before,
+  .common::after {
     content: "";
     background-size: contain;
     background-repeat: no-repeat;
@@ -100,5 +100,38 @@
 
   .box-shadow {
     box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
+  }
+
+  .start-creating-box::before {
+    background-image: url("./assets/Png/startcreating/star.png");
+    left: 0;
+    top: 2;
+  }
+
+  .start-creating-box::after {
+    background-image: url("./assets/Png/startcreating/gamepad.png");
+    left: 20px;
+    bottom: 80px;
+  }
+
+  .start-creating-wrapper::before {
+    background-image: url("./assets/Png/startcreating/media.png");
+    right: 20px;
+    top: 80px;
+  }
+
+  .start-creating-wrapper::after {
+    background-image: url("./assets/Png/startcreating/star.png");
+    right: 70px;
+    bottom: 0;
+  }
+
+  .star::before {
+    background-image: url("./assets/Png/startcreating/xstar.png");
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
   }
 }

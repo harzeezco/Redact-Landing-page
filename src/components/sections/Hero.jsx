@@ -34,7 +34,7 @@ function Hero() {
       <div className="lg:justify-self-end">
         <div className="grid grid-cols-[54px_1fr] gap-x-4">
           <img src={videoSidNav} alt="video bars" height="340" width="54" />
-          <div className="video-container relative">
+          <div className="video-container common relative">
             <img src={video} alt="video" height="364" width="100%" />
           </div>
         </div>
