@@ -7,12 +7,12 @@ import Drawer from "@/components/navigation/Drawer";
 import Link from "@/components/navigation/Link";
 import Nav from "@/components/navigation/Nav";
 import NavToggler from "@/components/navigation/NavToggler";
-import { NavContext } from "@/contexts/NavContext";
+import { HeaderContext } from "@/contexts/HeaderContext";
 import { NAV_LINKS } from "@/lib/data";
 import { AnimatePresence } from "framer-motion";
 
-function Navbar() {
-  const { isActive } = useContext(NavContext);
+function Header() {
+  const { isActive } = useContext(HeaderContext);
 
   return (
     <header className="mx-auto flex max-w-[1070px] items-center justify-between px-5 py-10 md:flex-row">
@@ -43,4 +43,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default Header;

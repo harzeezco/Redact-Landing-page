@@ -17,7 +17,7 @@ function Features() {
             <br />
             elements
           </h1>
-          <p className="mb-10 mt-4 pr-10 leading-6 text-grayDark md:pr-32">
+          <p className="mb-10 mt-4 pr-10 leading-6 text-grayDark lg:pr-0">
             Make your video more engaging with diverse dynamic text, overlays,
             widgets, logos, and other animated elements. It’a very much easier.
           </p>

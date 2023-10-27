@@ -2,9 +2,9 @@ import { createContext, useEffect, useMemo, useState } from "react";
 
 import PropTypes from "prop-types";
 
-export const NavContext = createContext();
+export const HeaderContext = createContext();
 
-function NavContextProvider({ children }) {
+function HeaderContextProvider({ children }) {
   const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
@@ -23,11 +23,13 @@ function NavContextProvider({ children }) {
     [isActive, setIsActive],
   );
 
-  return <NavContext.Provider value={state}>{children}</NavContext.Provider>;
+  return (
+    <HeaderContext.Provider value={state}>{children}</HeaderContext.Provider>
+  );
 }
 
-NavContextProvider.propTypes = {
+HeaderContextProvider.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export default NavContextProvider;
+export default HeaderContextProvider;

@@ -1,4 +1,4 @@
-import mergeClasses from "../lib/utils";
+import mergeClasses from "@/lib/utils";
 
 function Container({ children, className = "" }) {
   return (

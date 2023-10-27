@@ -1,7 +1,7 @@
 import { useContext } from "react";
 
 import Link from "@/components/navigation/Link";
-import { NavContext } from "@/contexts/NavContext";
+import { HeaderContext } from "@/contexts/HeaderContext";
 import { motion } from "framer-motion";
 import PropTypes from "prop-types";
 
@@ -28,7 +28,7 @@ export default function DrawerLinks({
   setSelectedIndicator,
 }) {
   const { label, href, index } = data;
-  const { setIsActive } = useContext(NavContext);
+  const { setIsActive } = useContext(HeaderContext);
 
   return (
     <motion.div

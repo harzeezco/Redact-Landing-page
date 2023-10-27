@@ -1,12 +1,12 @@
 import { useContext, useLayoutEffect, useRef } from "react";
 
-import { NavContext } from "../contexts/NavContext";
+import { HeaderContext } from "@/contexts/HeaderContext";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const useGsapScrollTrigger = () => {
   const button = useRef(null);
-  const { isActive, setIsActive } = useContext(NavContext);
+  const { isActive, setIsActive } = useContext(HeaderContext);
 
   useLayoutEffect(() => {
     function handleResize() {
