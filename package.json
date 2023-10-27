@@ -12,6 +12,7 @@
     "fix": "eslint --fix . --config .eslintrc.cjs"
   },
   "dependencies": {
+    "framer-motion": "^10.16.4",
     "gsap": "^3.12.2",
     "locomotive-scroll": "^4.1.4",
     "prop-types": "^15.8.1",

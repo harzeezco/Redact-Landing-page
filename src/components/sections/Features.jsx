@@ -1,7 +1,10 @@
 import { FEATURES } from "../../lib/data";
 import card from "@/assets/Png/card.png";
 import card1 from "@/assets/Png/card2.png";
+import cardWebp from "@/assets/Webp/card.webp";
+import card1Webp from "@/assets/Webp/card2.webp";
 import Button from "@/components/global/Button";
+import Image from "@/components/global/Image";
 import Container from "@/layout/Container";
 
 function Features() {
@@ -21,10 +24,24 @@ function Features() {
           <Button btnType="primary">Create a video</Button>
         </div>
 
-        <img src={card1} alt="edit" height="457" width="570" />
+        <Image
+          defaultSrc={card1Webp}
+          alternateSrc={card1}
+          alt="edit"
+          height="457"
+          width="570"
+          loading="lazy"
+        />
 
         <div className="order-last">
-          <img src={card} alt="text search" height="457" width="570" />
+          <Image
+            defaultSrc={cardWebp}
+            alternateSrc={card}
+            alt="text search"
+            height="457"
+            width="570"
+            loading="lazy"
+          />
         </div>
         <div className="lg:order-last">
           <h1 className="mb-10 font-primary text-1xl font-bold md:text-4xl md:leading-[52px]">
@@ -41,6 +58,7 @@ function Features() {
                 alt={feature.alt}
                 width="32"
                 height="32"
+                loading="lazy"
               />
               <div>
                 <h2 className="font-semibold sm:text-lg">{feature.title}</h2>

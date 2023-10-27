@@ -2,7 +2,10 @@ import arrow from "@/assets/Png/roundBgArrowIcon.png";
 import video from "@/assets/Png/video.png";
 import videoSidNav from "@/assets/Png/videoSideNav.png";
 import playIcon from "@/assets/Svg/playIcon.svg";
+import videoWebp from "@/assets/Webp/video.webp";
+import videoSidNavWebp from "@/assets/Webp/videoSideNav.webp";
 import Button from "@/components/global/Button";
+import Image from "@/components/global/Image";
 import Container from "@/layout/Container";
 
 function Hero() {
@@ -17,7 +20,7 @@ function Hero() {
             <br />
             emotion
           </h1>
-          <p className="mt-2 pr-10 text-sm leading-6 text-grayDark md:pr-20">
+          <p className="text-small mt-2 pr-10 leading-6 text-grayDark md:pr-20">
             The best video editors in town. The epitome of video editing, best
             effects and cuts Videos for a better life For a better watching
             experience.
@@ -27,16 +30,28 @@ function Hero() {
               Try for free
             </Button>
             <Button btnType="outline" lg>
-              <img src={playIcon} alt="play" />
+              <img src={playIcon} alt="play" height="22" width="22" />
               Watch video
             </Button>
           </div>
         </div>
         <div className="lg:justify-self-end">
           <div className="grid grid-cols-[54px_1fr] gap-x-4">
-            <img src={videoSidNav} alt="video bars" height="340" width="54" />
+            <Image
+              defaultSrc={videoSidNavWebp}
+              alternateSrc={videoSidNav}
+              alt="video bars"
+              height="340"
+              width="54"
+            />
             <div className="video-container common relative">
-              <img src={video} alt="video" height="364" width="100%" />
+              <Image
+                defaultSrc={videoWebp}
+                alternateSrc={video}
+                alt="video"
+                height="364"
+                width="100%"
+              />
             </div>
           </div>
           <div className="mr-8 text-right">
@@ -46,7 +61,7 @@ function Hero() {
               </Button>
             </div>
             <button type="button" className="-mt-8">
-              <img src={arrow} alt="arrow" />
+              <img src={arrow} alt="arrow" height="48" width="48" />
             </button>
           </div>
         </div>

@@ -5,6 +5,7 @@ export default {
     extend: {
       fontSize: {
         "1xl": "1.7rem",
+        small: "0.95rem",
         "4xl": "2.6rem",
       },
       fontFamily: {
@@ -18,6 +19,7 @@ export default {
         lightPurple: "#917AEB",
         deepPurple: "#250441",
         darkPurple: "#1F1A33",
+        lightPink: "#DAC1AB",
       },
     },
   },

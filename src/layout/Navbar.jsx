@@ -1,12 +1,19 @@
+import { useContext } from "react";
+
 import redactLogo from "@/assets/Svg/redactLogo.svg";
 import Button from "@/components/global/Button";
 import RegularList from "@/components/global/RegularList";
+import Drawer from "@/components/navigation/Drawer";
 import Link from "@/components/navigation/Link";
 import Nav from "@/components/navigation/Nav";
 import NavToggler from "@/components/navigation/NavToggler";
+import { NavContext } from "@/contexts/NavContext";
 import { NAV_LINKS } from "@/lib/data";
+import { AnimatePresence } from "framer-motion";
 
 function Navbar() {
+  const { isActive } = useContext(NavContext);
+
   return (
     <header className="mx-auto flex max-w-[1070px] items-center justify-between px-5 py-10 md:flex-row">
       <Link to="/" noCustomization linkWithUnderline>
@@ -30,6 +37,8 @@ function Navbar() {
       </div>
 
       <NavToggler />
+
+      <AnimatePresence mode="wait">{isActive && <Drawer />}</AnimatePresence>
     </header>
   );
 }

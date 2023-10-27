@@ -109,29 +109,247 @@
   }
 
   .start-creating-box::after {
-    background-image: url("./assets/Png/startcreating/gamepad.png");
+    background-image: url("./assets/Webp/startcreating/gamepad.webp");
     left: 20px;
     bottom: 80px;
   }
 
   .start-creating-wrapper::before {
-    background-image: url("./assets/Png/startcreating/media.png");
+    background-image: url("./assets/Webp/startcreating/media.webp");
     right: 20px;
     top: 80px;
   }
 
   .start-creating-wrapper::after {
-    background-image: url("./assets/Png/startcreating/star.png");
+    background-image: url("./assets/Webp/startcreating/star.webp");
     right: 70px;
     bottom: 0;
   }
 
   .star::before {
-    background-image: url("./assets/Png/startcreating/xstar.png");
-    position: absolute;
+    content: "";
+    background-image: url("./assets/Webp/startcreating/xstar.webp");
     bottom: 0;
     left: 0;
     width: 40px;
     height: 40px;
+    position: absolute;
+    background-repeat: no-repeat;
+  }
+
+  .overflow {
+    overflow: hidden;
+  }
+
+  .slider {
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .slides {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .slides::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+  }
+
+  .slides > div {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    transform-origin: center center;
+    transform: scale(1);
+    transition: transform 0.5s;
+    position: relative;
+    padding-right: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+  }
+
+  @keyframes tonext {
+    75% {
+      left: 0;
+    }
+    95% {
+      left: 100%;
+    }
+    98% {
+      left: 100%;
+    }
+    99% {
+      left: 0;
+    }
+  }
+
+  @keyframes tostart {
+    75% {
+      left: 0;
+    }
+    95% {
+      left: -300%;
+    }
+    98% {
+      left: -300%;
+    }
+    99% {
+      left: 0;
+    }
+  }
+
+  @keyframes snap {
+    96% {
+      scroll-snap-align: center;
+    }
+    97% {
+      scroll-snap-align: none;
+    }
+    99% {
+      scroll-snap-align: none;
+    }
+    100% {
+      scroll-snap-align: center;
+    }
+  }
+
+  * {
+    box-sizing: border-box;
+    scrollbar-color: transparent transparent; 
+    scrollbar-width: 0px;
+  }
+
+  *::-webkit-scrollbar {
+    width: 0;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background: transparent;
+    border: none;
+  }
+
+  * {
+    -ms-overflow-style: none;
+  }
+
+  ol,
+  li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .carousel {
+    position: relative;
+    padding-top: 37%;
+    filter: drop-shadow(0 0 10px #0003);
+    perspective: 100px;
+    margin-top: 50px;
+    /* height: 400px; */
+  }
+
+  .carousel__viewport {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    gap: 25px;
+  }
+
+  .carousel__slide {
+    position: relative;
+    flex: 0 0 31%;
+  }
+
+  .carousel__snapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    scroll-snap-align: center;
+  }
+
+  .carousel:hover .carousel__snapper,
+  .carousel:focus-within .carousel__snapper {
+    animation-name: none;
+  }
+
+  .carousel__navigation {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+  }
+
+  .carousel__navigation-list,
+  .carousel__navigation-item {
+    display: inline-block;
+  }
+
+  .carousel__navigation-button {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #dac1ab;
+    background-clip: content-box;
+    border: 0.25rem solid transparent;
+    border-radius: 50%;
+    font-size: 0;
+    transition:
+      transform 0.1s,
+      background-color 0.5s;
+  }
+
+  .carousel__navigation-button:hover,
+  .carousel__navigation-button:active {
+    background-color: #ffa654;
+  }
+}
+
+@media (max-width: 467px) {
+  .start-creating-wrapper::before {
+    right: 0px;
+    top: 110px;
+  }
+
+  .carousel__slide {
+    flex: 0 0 70%;
+  }
+}
+
+@media (max-width: 967px) {
+  .star::before,
+  .start-creating-box::after,
+  .start-creating-box::before,
+  .start-creating-wrapper::after,
+  .start-creating-wrapper::before {
+    width: 90px;
+    height: 40px;
+  }
+}
+
+@media ((min-width: 467px) and (max-width: 967px)) {
+  .start-creating-wrapper::before {
+    right: 0;
+    top: 20px;
+  }
+
+  .star::before {
+    bottom: -40px;
+    left: 70px;
   }
 }

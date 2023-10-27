@@ -68,7 +68,7 @@ export const FOOTER_NAVS = [
     navs: ["Pricing", "Enterprise", "YouTube Guides", "Blog"],
   },
   {
-    id: 0,
+    id: 3,
     title: "Company",
     navs: ["VCareers", "Affiliate", "Privacy", "Terms", "Security", "Cookies"],
   },

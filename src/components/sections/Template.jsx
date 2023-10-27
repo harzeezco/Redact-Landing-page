@@ -4,38 +4,15 @@ import vid3 from "@/assets/Png/templates/vid3.png";
 import vid4 from "@/assets/Png/templates/vid4.png";
 import vid5 from "@/assets/Png/templates/vid5.png";
 import vid6 from "@/assets/Png/templates/vid6.png";
+import vid1Webp from "@/assets/Webp/templates/vid1.webp";
+import vid2Webp from "@/assets/Webp/templates/vid2.webp";
+import vid3Webp from "@/assets/Webp/templates/vid3.webp";
+import vid4Webp from "@/assets/Webp/templates/vid4.webp";
+import vid5Webp from "@/assets/Webp/templates/vid5.webp";
+import vid6Webp from "@/assets/Webp/templates/vid6.webp";
 import Button from "@/components/global/Button";
+import Image from "@/components/global/Image";
 import Container from "@/layout/Container";
-
-const TEMPLATES = [
-  {
-    title: "Recommended",
-  },
-  {
-    title: "Corporate",
-  },
-  {
-    title: "Promo",
-  },
-  {
-    title: "Intro/Outro",
-  },
-  {
-    title: "Education",
-  },
-  {
-    title: "Sport",
-  },
-  {
-    title: "Real Estate",
-  },
-  {
-    title: "Birthday",
-  },
-  {
-    title: "Slideshow",
-  },
-];
 
 function Template() {
   return (
@@ -45,26 +22,76 @@ function Template() {
           Thousands of templates
         </h1>
 
-        <div className="mt-5 grid grid-cols-3 place-items-center md:grid-cols-5 lg:grid-cols-9">
-          {TEMPLATES.map(({ title }) => (
-            <button type="button" key={title}>
-              {title}
-            </button>
-          ))}
+        <div className="slider mt-4">
+          <div className="slides gap-4 lg:flex">
+            <div>Recommended</div>
+            <div>Corporate</div>
+            <div>Promo</div>
+            <div>Intro/Outro</div>
+            <div>Education</div>
+            <div>Sport</div>
+            <div>Real Estate</div>
+            <div>Birthday</div>
+            <div>Slideshow</div>
+          </div>
         </div>
 
         <div className="mt-16 grid grid-cols-2 items-center gap-3 md:grid-cols-4">
           <div className="">
-            <img src={vid4} alt="" />
+            <Image
+              defaultSrc={vid4Webp}
+              alternateSrc={vid4}
+              alt="adventure"
+              loading="lazy"
+              width="270"
+              height="442"
+            />
           </div>
           <div className="col-2">
-            <img src={vid6} alt="" className="pb-5" />
-            <img src={vid2} alt="" />
+            <Image
+              defaultSrc={vid6Webp}
+              alternateSrc={vid6}
+              alt="adventure"
+              className="pb-5"
+              loading="lazy"
+              width="270"
+              height="205"
+            />
+            <Image
+              defaultSrc={vid2Webp}
+              alternateSrc={vid2}
+              alt="adventure"
+              loading="lazy"
+              width="270"
+              height="205"
+            />
           </div>
-          <img src={vid1} alt="" />
+          <Image
+            defaultSrc={vid1Webp}
+            alternateSrc={vid1}
+            alt="adventure"
+            loading="lazy"
+            width="270"
+            height="442"
+          />
           <div>
-            <img src={vid3} alt="" className="pb-5" />
-            <img src={vid5} alt="" />
+            <Image
+              defaultSrc={vid3Webp}
+              alternateSrc={vid3}
+              alt="adventure"
+              className="pb-5"
+              loading="lazy"
+              width="270"
+              height="205"
+            />
+            <Image
+              defaultSrc={vid5Webp}
+              alternateSrc={vid5}
+              alt="adventure"
+              loading="lazy"
+              width="270"
+              height="205"
+            />
           </div>
         </div>
 

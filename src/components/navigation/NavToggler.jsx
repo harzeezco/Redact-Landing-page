@@ -4,7 +4,7 @@ function NavToggler() {
   const { button, isActive, setIsActive } = useGsapScrollTrigger();
 
   return (
-    <div ref={button} className="fixed right-0 z-10 scale-0 transform">
+    <div ref={button} className="fixed right-0 z-20 scale-0 transform">
       <button
         type="button"
         className="relative m-5 flex h-16 w-16 cursor-pointer items-center rounded-full"
