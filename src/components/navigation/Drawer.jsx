@@ -37,7 +37,7 @@ function Drawer() {
           </ul>
         </div>
 
-        <div className="hidden gap-x-6 lg:inline-flex lg:items-center">
+        <div className="flex items-center gap-x-6">
           <Button btnType="outline">Log in</Button>
           <Button btnType="dark" background="#1E2A39">
             Sign up
