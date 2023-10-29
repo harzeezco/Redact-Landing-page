@@ -52,6 +52,7 @@ function Button({
             "text-lightPurple flex items-center pb-4 pt-3 text-sm font-medium transition-all",
           )}
           style={{ backgroundColor: background }}
+
         >
           {children}
         </button>
