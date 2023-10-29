@@ -1,14 +1,14 @@
-import NavContextProvider from "@/contexts/NavContext";
+import HeaderContextProvider from "@/contexts/HeaderContext";
 import Footer from "@/layout/Footer";
+import Header from "@/layout/Header";
 import Main from "@/layout/Main";
-import Navbar from "@/layout/Navbar";
 
 function LandingPage() {
   return (
     <div className="bg-fadeWhite">
-      <NavContextProvider>
-        <Navbar />
-      </NavContextProvider>
+      <HeaderContextProvider>
+        <Header />
+      </HeaderContextProvider>
       <Main />
       <Footer />
     </div>

@@ -50,3 +50,69 @@ export const FEATURES = [
       "Add more personality to your content with free elements from our vast media library.",
   },
 ];
+
+export const FOOTER_NAVS = [
+  {
+    id: 0,
+    title: "Tools",
+    navs: ["Video Editor", "Subtitles", "Screen Recorder", "Video Compressor"],
+  },
+  {
+    id: 1,
+    title: "Create",
+    navs: ["Social Media Videos", "Business Videos", "Promo Videos"],
+  },
+  {
+    id: 2,
+    title: "Product",
+    navs: ["Pricing", "Enterprise", "YouTube Guides", "Blog"],
+  },
+  {
+    id: 3,
+    title: "Company",
+    navs: ["VCareers", "Affiliate", "Privacy", "Terms", "Security", "Cookies"],
+  },
+];
+
+export const CATEGORIES = [
+  {
+    id: 0,
+    label: "Recommended",
+  },
+  {
+    id: 1,
+    label: "Corporate",
+  },
+  {
+    id: 2,
+    label: "Promo",
+  },
+  {
+    id: 3,
+    label: "Intro/Outro",
+  },
+  {
+    id: 4,
+    label: "Education",
+  },
+  {
+    id: 5,
+    label: "Sport",
+  },
+  {
+    id: 6,
+    label: "Foods",
+  },
+  {
+    id: 7,
+    label: "Real Estate",
+  },
+  {
+    id: 8,
+    label: "Birthday",
+  },
+  {
+    id: 9,
+    label: "Slideshow",
+  },
+];

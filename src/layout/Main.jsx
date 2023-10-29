@@ -4,12 +4,15 @@ import StartCreating from "@/components/sections/StartCreating";
 import Template from "@/components/sections/Template";
 import Testimonials from "@/components/sections/Testimonials";
 import Trusted from "@/components/sections/Trusted";
+import ImagesContextProvider from "@/contexts/ImagesContext";
 
 function Main() {
   return (
-    <main>
+    <main className="main-container">
       <HeroSection />
-      <Template />
+      <ImagesContextProvider>
+        <Template />
+      </ImagesContextProvider>
       <Features />
       <Testimonials />
       <Trusted />
