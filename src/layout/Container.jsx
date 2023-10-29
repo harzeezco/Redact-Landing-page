@@ -1,9 +1,9 @@
 import mergeClasses from "../lib/utils";
 
-function Container({ children, className }) {
+function Container({ children, className = "" }) {
   return (
     <div
-      className={mergeClasses("mx-auto max-w-[1070px] px-5 py-14", className)}
+      className={mergeClasses("mx-auto max-w-[1070px] px-5 py-16", className)}
     >
       {children}
     </div>

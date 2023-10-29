@@ -1,3 +1,4 @@
+import Features from "@/components/sections/Features";
 import HeroSection from "@/components/sections/Hero";
 import Template from "@/components/sections/Template";
 
@@ -6,6 +7,7 @@ function Main() {
     <main>
       <HeroSection />
       <Template />
+      <Features />
     </main>
   );
 }
