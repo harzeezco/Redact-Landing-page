@@ -49,7 +49,6 @@ function Button({
           type="button"
           className="button flex items-center gap-3 rounded-[4px] px-6 pb-4 pt-3 font-medium transition-all"
           style={{ backgroundColor: background }}
-
         >
           {children}
         </button>
