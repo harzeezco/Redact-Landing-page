@@ -10,8 +10,10 @@ function HeaderContextProvider({ children }) {
   useEffect(() => {
     if (isActive) {
       document.querySelector("body").classList.add("overflow");
+      document.querySelector(".main-container").classList.add("blur-bg");
     } else {
       document.querySelector("body").classList.remove("overflow");
+      document.querySelector(".main-container").classList.remove("blur-bg");
     }
   }, [isActive]);
 

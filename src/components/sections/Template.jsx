@@ -1,99 +1,44 @@
-import vid1 from "@/assets/Png/templates/vid1.png";
-import vid2 from "@/assets/Png/templates/vid2.png";
-import vid3 from "@/assets/Png/templates/vid3.png";
-import vid4 from "@/assets/Png/templates/vid4.png";
-import vid5 from "@/assets/Png/templates/vid5.png";
-import vid6 from "@/assets/Png/templates/vid6.png";
-import vid1Webp from "@/assets/Webp/templates/vid1.webp";
-import vid2Webp from "@/assets/Webp/templates/vid2.webp";
-import vid3Webp from "@/assets/Webp/templates/vid3.webp";
-import vid4Webp from "@/assets/Webp/templates/vid4.webp";
-import vid5Webp from "@/assets/Webp/templates/vid5.webp";
-import vid6Webp from "@/assets/Webp/templates/vid6.webp";
+/* eslint-disable operator-linebreak */
+import { useContext } from "react";
+
+import TemplateImages from "@/components/common/TemplateImages";
 import Button from "@/components/global/Button";
-import Image from "@/components/global/Image";
+import { ImagesContext } from "@/contexts/ImagesContext";
 import Container from "@/layout/Container";
+import { CATEGORIES } from "@/lib/data";
+import mergeClasses from "@/lib/utils";
 
 function Template() {
+  const { setImageCategories, imageCategories, observe } =
+    useContext(ImagesContext);
+
   return (
-    <section>
+    <section ref={observe} id="template">
       <Container>
-        <h1 className="font-primary text-1xl font-bold md:text-center md:text-4xl">
+        <h1 className="text-1xl font-bold md:text-center md:text-4xl">
           Thousands of templates
         </h1>
 
-        <div className="slider mt-4">
-          <div className="slides gap-4 lg:flex">
-            <div>Recommended</div>
-            <div>Corporate</div>
-            <div>Promo</div>
-            <div>Intro/Outro</div>
-            <div>Education</div>
-            <div>Sport</div>
-            <div>Real Estate</div>
-            <div>Birthday</div>
-            <div>Slideshow</div>
-          </div>
+        <div className="slides mx-auto mt-4  gap-4 lg:flex">
+          {CATEGORIES.map((category) => (
+            <div key={category.id} className="relative">
+              <button
+                type="button"
+                className={mergeClasses(
+                  category.label === imageCategories
+                    ? "activeLink relative inline-block bg-transparent text-lg"
+                    : "",
+                  "underlineLink whitespace-nowrap",
+                )}
+                onClick={() => setImageCategories(category.label)}
+              >
+                {category.label}
+              </button>
+            </div>
+          ))}
         </div>
 
-        <div className="mt-16 grid grid-cols-2 items-center gap-3 md:grid-cols-4">
-          <div className="">
-            <Image
-              defaultSrc={vid4Webp}
-              alternateSrc={vid4}
-              alt="adventure"
-              loading="lazy"
-              width="270"
-              height="442"
-            />
-          </div>
-          <div className="col-2">
-            <Image
-              defaultSrc={vid6Webp}
-              alternateSrc={vid6}
-              alt="adventure"
-              className="pb-5"
-              loading="lazy"
-              width="270"
-              height="205"
-            />
-            <Image
-              defaultSrc={vid2Webp}
-              alternateSrc={vid2}
-              alt="adventure"
-              loading="lazy"
-              width="270"
-              height="205"
-            />
-          </div>
-          <Image
-            defaultSrc={vid1Webp}
-            alternateSrc={vid1}
-            alt="adventure"
-            loading="lazy"
-            width="270"
-            height="442"
-          />
-          <div>
-            <Image
-              defaultSrc={vid3Webp}
-              alternateSrc={vid3}
-              alt="adventure"
-              className="pb-5"
-              loading="lazy"
-              width="270"
-              height="205"
-            />
-            <Image
-              defaultSrc={vid5Webp}
-              alternateSrc={vid5}
-              alt="adventure"
-              loading="lazy"
-              width="270"
-              height="205"
-            />
-          </div>
-        </div>
+        <TemplateImages />
 
         <div className="mt-14 flex justify-center">
           <Button btnType="primary">Create a video</Button>

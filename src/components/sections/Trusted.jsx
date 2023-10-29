@@ -21,6 +21,7 @@ function Trusted() {
                 alt="nerdwallet logo"
                 height="38"
                 width="174"
+                loading="lazy"
               />
             </div>
             <div>

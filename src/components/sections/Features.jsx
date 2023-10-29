@@ -1,11 +1,14 @@
-import { FEATURES } from "../../lib/data";
 import card from "@/assets/Png/card.png";
 import card1 from "@/assets/Png/card2.png";
-import cardWebp from "@/assets/Webp/card.webp";
-import card1Webp from "@/assets/Webp/card2.webp";
+import desktopSearch from "@/assets/Webp/desktop_search.webp";
+import featureDesktop from "@/assets/Webp/feature_desktop.webp";
+import featureMobile from "@/assets/Webp/feature_mobile.webp";
+import featureTablet from "@/assets/Webp/feature_tablet.webp";
+import mobileSearch from "@/assets/Webp/mobile_search.webp";
+import tabletSearch from "@/assets/Webp/tablet_search.webp";
 import Button from "@/components/global/Button";
-import Image from "@/components/global/Image";
 import Container from "@/layout/Container";
+import { FEATURES } from "@/lib/data";
 
 function Features() {
   return (
@@ -24,23 +27,27 @@ function Features() {
           <Button btnType="primary">Create a video</Button>
         </div>
 
-        <Image
-          defaultSrc={card1Webp}
-          alternateSrc={card1}
-          alt="edit"
+        <img
+          src={card1}
+          srcSet={`${featureMobile} 400w, ${featureTablet} 800w, ${featureDesktop} 1200w`}
+          sizes="(max-width: 480px) 100vw, (max-width: 1440px) 49vw,"
+          alt="video poster"
+          loading="lazy"
+          // className="h-64 lg:h-96"
           height="457"
           width="570"
-          loading="lazy"
         />
 
         <div className="order-last">
-          <Image
-            defaultSrc={cardWebp}
-            alternateSrc={card}
-            alt="text search"
+          <img
+            src={card}
+            srcSet={`${mobileSearch} 400w, ${tabletSearch} 800w, ${desktopSearch} 1200w`}
+            sizes="(max-width: 480px) 100vw, (max-width: 1440px) 49vw,"
+            alt="video poster"
+            loading="lazy"
+            // className="h-64 lg:h-96"
             height="457"
             width="570"
-            loading="lazy"
           />
         </div>
         <div className="lg:order-last">

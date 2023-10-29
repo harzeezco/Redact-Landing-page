@@ -73,3 +73,46 @@ export const FOOTER_NAVS = [
     navs: ["VCareers", "Affiliate", "Privacy", "Terms", "Security", "Cookies"],
   },
 ];
+
+export const CATEGORIES = [
+  {
+    id: 0,
+    label: "Recommended",
+  },
+  {
+    id: 1,
+    label: "Corporate",
+  },
+  {
+    id: 2,
+    label: "Promo",
+  },
+  {
+    id: 3,
+    label: "Intro/Outro",
+  },
+  {
+    id: 4,
+    label: "Education",
+  },
+  {
+    id: 5,
+    label: "Sport",
+  },
+  {
+    id: 6,
+    label: "Foods",
+  },
+  {
+    id: 7,
+    label: "Real Estate",
+  },
+  {
+    id: 8,
+    label: "Birthday",
+  },
+  {
+    id: 9,
+    label: "Slideshow",
+  },
+];

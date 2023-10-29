@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+import Button from "@/components/global/Button";
 import Curve from "@/components/navigation/Curve";
 import DrawerLinks from "@/components/navigation/DrawerLinks";
 import { NAV_LINKS } from "@/lib/data";
@@ -16,7 +17,7 @@ function Drawer() {
       animate={{ x: 0 }}
       exit={{ x: "100%" }}
       transition={{ duration: 0.5 }}
-      className="fixed right-0 top-0 z-10 h-screen w-full bg-white lg:w-[70vw]"
+      className="fixed right-0 top-0 z-30 h-screen w-full bg-white lg:w-[70vw]"
     >
       <div className="flex h-full flex-col justify-between p-16">
         <div className="nav flex flex-col gap-3 text-4xl">
@@ -34,6 +35,13 @@ function Drawer() {
               />
             ))}
           </ul>
+        </div>
+
+        <div className="hidden gap-x-6 lg:inline-flex lg:items-center">
+          <Button btnType="outline">Log in</Button>
+          <Button btnType="dark" background="#1E2A39">
+            Sign up
+          </Button>
         </div>
       </div>
       <Curve />

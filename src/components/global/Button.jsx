@@ -7,7 +7,7 @@ function Button({
   lg = false,
 }) {
   const commonClassNames = mergeClasses(
-    "rounded-[4px] px-6 text-lg font-semibold",
+    "rounded-[4px] px-6 text-sm md:text-lg font-semibold",
     lg ? "pb-4 pt-3" : "pb-3 pt-2",
   );
   switch (btnType) {
@@ -15,7 +15,7 @@ function Button({
       return (
         <button
           type="button"
-          className={mergeClasses(commonClassNames, "text-white")}
+          className={mergeClasses(commonClassNames, "button text-white")}
           style={{ backgroundColor: background }}
         >
           {children}
@@ -25,7 +25,7 @@ function Button({
       return (
         <button
           type="button"
-          className={mergeClasses(commonClassNames, "text-white")}
+          className={mergeClasses(commonClassNames, "button text-white")}
           style={{ backgroundColor: background }}
         >
           {children}
@@ -37,7 +37,7 @@ function Button({
           type="button"
           className={mergeClasses(
             commonClassNames,
-            "flex items-center gap-3 font-semibold transition-all hover:bg-grayLight hover:text-white",
+            "button flex items-center gap-3 font-semibold transition-all hover:bg-grayLight hover:text-white",
           )}
         >
           {children}
@@ -47,7 +47,7 @@ function Button({
       return (
         <button
           type="button"
-          className="flex items-center gap-3 rounded-[4px] px-6 pb-4 pt-3 font-medium transition-all"
+          className="button flex items-center gap-3 rounded-[4px] px-6 pb-4 pt-3 font-medium transition-all"
           style={{ backgroundColor: background }}
         >
           {children}

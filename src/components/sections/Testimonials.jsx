@@ -27,7 +27,7 @@ function Testimonials() {
                   width="20"
                   loading="lazy"
                 />
-                <p className="my-3 text-sm font-medium md:text-base">
+                <p className="my-3 text-sm font-medium  sm:text-small md:text-base">
                   Very impressive video editing tool I have ever seen. It has so
                   many awesome features to edit a video like pro. I have enjoyed
                   a lot while making my youtube channel video. Really impressive
@@ -48,6 +48,7 @@ function Testimonials() {
                   height="350"
                   width="370"
                   loading="lazy"
+                  className="h-[200px]"
                 />
                 <p className="p-4 pb-6 font-semibold md:text-xl md:leading-8">
                   Very impressive video editing tool I have ever seen...
@@ -64,6 +65,7 @@ function Testimonials() {
                   height="350"
                   width="370"
                   loading="lazy"
+                  className="h-[200px]"
                 />
                 <h3 className="p-4 pb-6 font-semibold md:text-xl md:leading-8">
                   Very impressive video editing tool I have ever seen...
@@ -79,7 +81,7 @@ function Testimonials() {
                   height="15"
                   width="15"
                 />
-                <p className="my-3 text-sm font-medium md:text-base">
+                <p className="my-3 text-sm font-medium sm:text-small md:text-base">
                   Very impressive video editing tool I have ever seen. It has so
                   many awesome features to edit a video like pro. I have enjoyed
                   a lot while making my youtube channel video. Really impressive

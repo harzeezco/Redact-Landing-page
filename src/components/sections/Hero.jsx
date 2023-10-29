@@ -1,34 +1,15 @@
+import desktopPng from "@/assets/Png/desktop.png";
 import arrow from "@/assets/Png/roundBgArrowIcon.png";
-import video from "@/assets/Png/video.png";
 import videoSidNav from "@/assets/Png/videoSideNav.png";
-import edit from "@/assets/Svg/edit.svg";
-import menu from "@/assets/Svg/menu.svg";
-import pizza from "@/assets/Svg/pizza.svg";
 import playIcon from "@/assets/Svg/playIcon.svg";
-import videoWebp from "@/assets/Webp/video.webp";
+import mobile from "@/assets/Webp/400w.webp";
+import desktop from "@/assets/Webp/desktop.webp";
+import tablet from "@/assets/Webp/tablet.webp";
 import videoSidNavWebp from "@/assets/Webp/videoSideNav.webp";
-import ProgressBar from "@/components//global/ProgressBar";
+import Editor from "@/components/common/Editor";
 import Button from "@/components/global/Button";
 import Image from "@/components/global/Image";
 import Container from "@/layout/Container";
-
-const PROGRESS_VALUES = [
-  {
-    id: 0,
-    title: "Exposure",
-    value: 24,
-  },
-  {
-    id: 1,
-    title: "Brightness",
-    value: 29,
-  },
-  {
-    id: 2,
-    title: "Contrast",
-    value: 27,
-  },
-];
 
 function Hero() {
   return (
@@ -58,29 +39,7 @@ function Hero() {
           </div>
         </div>
         <div className="relative lg:justify-self-end">
-          <div className="box-shadow absolute left-20 top-[42%] z-10 h-[197px] w-[244px] rounded-lg bg-white md:left-[-10%] md:top-2/4">
-            <div className="bg-deemGray mx-auto mt-5 flex h-[60px] max-w-[208px] items-center justify-around gap-3 rounded-md">
-              <button type="button">
-                <img src={pizza} alt="pizza" height="20" width="20" />
-              </button>
-              <button type="button">
-                <img src={menu} alt="menu" height="20" width="20" />
-              </button>
-              <button type="button">
-                <img src={edit} alt="edit" height="20" width="20" />
-              </button>
-            </div>
-
-            <div className="mx-auto mt-4 grid max-w-[208px] gap-y-3">
-              {PROGRESS_VALUES.map((details) => (
-                <ProgressBar
-                  key={details.id}
-                  initialValue={details.value}
-                  title={details.title}
-                />
-              ))}
-            </div>
-          </div>
+          <Editor />
           <div className="grid grid-cols-[54px_1fr] gap-x-4">
             <Image
               defaultSrc={videoSidNavWebp}
@@ -90,12 +49,13 @@ function Hero() {
               width="54"
             />
             <div className="video-container common relative">
-              <Image
-                defaultSrc={videoWebp}
-                alternateSrc={video}
-                alt="video"
-                height="364"
+              <img
+                src={desktopPng}
+                srcSet={`${mobile} 400w, ${tablet} 800w, ${desktop} 1200w`}
+                sizes="(max-width: 480px) 100vw, (max-width: 1440px) 49vw,"
+                alt="video poster"
                 width="100%"
+                className="h-64 lg:h-96"
               />
             </div>
           </div>
@@ -105,9 +65,9 @@ function Hero() {
                 + Add music
               </Button>
             </div>
-            <button type="button" className="-mt-8">
+            <a href="#template" className="-mt-8">
               <img src={arrow} alt="arrow" height="48" width="48" />
-            </button>
+            </a>
           </div>
         </div>
       </Container>

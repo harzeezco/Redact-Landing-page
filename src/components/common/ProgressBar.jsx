@@ -9,7 +9,7 @@ function ProgressBar({
 
   return (
     <div className="flex items-center gap-3">
-      <p className="text-sm font-medium text-grayLight">{title}</p>
+      <p className="text-sm font-medium">{title}</p>
       <input
         onChange={(e) => setValue(e.target.value)}
         type="range"
@@ -20,7 +20,7 @@ function ProgressBar({
         style={{ accentColor: accentBackground }}
         id="myRange"
       />
-      <p className="justify-self-end text-xs font-semibold text-grayLight">{`${value}%`}</p>
+      <p className="justify-self-end text-xs font-semibold">{`${value}%`}</p>
     </div>
   );
 }
