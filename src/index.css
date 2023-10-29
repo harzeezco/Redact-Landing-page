@@ -1,3 +1,17 @@
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/plusjakartasans/v8/LDIoaomQNQcsA88c7O9yZ4KMCoOg4Ko20yw.woff2)
+    format("woff2");
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/plusjakartasans/v8/LDIoaomQNQcsA88c7O9yZ4KMCoOg4Ko50yyygA.woff2)
+    format("woff2");
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -50,5 +64,28 @@
   .underline-text:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
+  }
+
+  .video-container::before,
+  .video-container::after {
+    content: "";
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 178px;
+    height: 102px;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .video-container::before {
+    background-image: url("./assets/Png/Color.png");
+    top: -35px;
+    left: 10px;
+  }
+
+  .video-container::after {
+    background-image: url("./assets/Png/sound.png");
+    bottom: -20px;
+    right: 70px;
   }
 }
