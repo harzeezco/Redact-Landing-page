@@ -1,6 +1,6 @@
-import media from "../assets/Svg/media.svg";
-import play from "../assets/Svg/play.svg";
-import sound from "../assets/Svg/sound.svg";
+import media from "@/assets/Svg/media.svg";
+import play from "@/assets/Svg/play.svg";
+import sound from "@/assets/Svg/sound.svg";
 
 export const NAV_LINKS = [
   {

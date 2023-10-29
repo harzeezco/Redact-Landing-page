@@ -5,7 +5,7 @@ import Navbar from "@/layout/Navbar";
 
 function LandingPage() {
   return (
-    <div>
+    <div className="bg-fadeWhite">
       <NavContextProvider>
         <Navbar />
       </NavContextProvider>
