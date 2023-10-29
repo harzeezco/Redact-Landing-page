@@ -6,7 +6,7 @@ function Nav({ link }) {
   return (
     <Link
       to={href}
-      className="underlineLink relative inline-block text-lg text-grayLight no-underline"
+      className="underlineLink relative inline-block text-lg text-grayLight no-underline hover:text-orange active:text-orange"
     >
       {label}
     </Link>

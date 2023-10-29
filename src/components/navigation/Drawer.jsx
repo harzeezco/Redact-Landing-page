@@ -19,8 +19,8 @@ function Drawer() {
       transition={{ duration: 0.5 }}
       className="fixed right-0 top-0 z-30 h-screen w-full bg-white lg:w-[70vw]"
     >
-      <div className="flex h-full flex-col justify-between p-16">
-        <div className="nav flex flex-col gap-3 text-4xl">
+      <div className="flex w-full justify-between p-16">
+        <div className="nav grid h-[80dvh] grid-rows-[auto-1fr-auto] gap-3 text-4xl">
           <p className="border-gray-600 text-gray-600 border-b text-sm uppercase">
             Menu
           </p>
@@ -35,13 +35,13 @@ function Drawer() {
               />
             ))}
           </ul>
-        </div>
 
-        <div className="flex items-center gap-x-6">
-          <Button btnType="outline">Log in</Button>
-          <Button btnType="dark" background="#1E2A39">
-            Sign up
-          </Button>
+          <div className="flex items-center gap-x-6">
+            <Button btnType="outline">Log in</Button>
+            <Button btnType="dark" background="#1E2A39">
+              Sign up
+            </Button>
+          </div>
         </div>
       </div>
       <Curve />

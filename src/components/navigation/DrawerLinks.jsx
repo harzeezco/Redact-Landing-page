@@ -52,7 +52,7 @@ export default function DrawerLinks({
         to={href}
         linkWithUnderline
         noCustomization={false}
-        className="py-2 text-5xl capitalize"
+        className="py-2 text-5xl capitalize transition hover:text-orange active:text-orange"
       >
         {label}
       </Link>

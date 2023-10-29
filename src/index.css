@@ -27,6 +27,10 @@
 @tailwind utilities;
 
 @layer components {
+  body {
+  scroll-behavior: smooth;
+  }
+
   .burger::after,
   .burger::before {
     content: "";
