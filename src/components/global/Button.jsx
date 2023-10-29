@@ -47,10 +47,7 @@ function Button({
       return (
         <button
           type="button"
-          className={mergeClasses(
-            commonClassNames,
-            "text-lightPurple flex items-center pb-4 pt-3 text-sm font-medium transition-all",
-          )}
+          className="flex items-center gap-3 rounded-[4px] px-6 pb-4 pt-3 font-medium transition-all"
           style={{ backgroundColor: background }}
 
         >
