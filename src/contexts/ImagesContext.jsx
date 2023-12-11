@@ -1,28 +1,31 @@
 import { createContext, useState, useMemo, useEffect } from "react";
 
+import useLocalStorage from "../hooks/useLocalStorage";
 import { useInView } from "react-cool-inview";
 
 export const ImagesContext = createContext();
 
-function ImagesContextProvider({ children = null }) {
-  const [imageCategories, setImageCategories] = useState("Recommended");
+function ImagesContextProvider({
+  children = null,
+  initialCategory = "Recommendedgjhklkll",
+}) {
+  const [category, setCategory] = useLocalStorage("category", initialCategory);
   const [isElementVisible, setIsElementVisible] = useState(false);
-
   const { observe, inView } = useInView({
     unobserveOnEnter: true,
   });
 
   useEffect(() => {
-    const l = setTimeout(() => {
+    const visibleTimeout = setTimeout(() => {
       setIsElementVisible(inView);
     }, 1000);
 
-    return () => clearTimeout(l);
+    return () => clearTimeout(visibleTimeout);
   }, [inView]);
 
   const state = useMemo(
-    () => ({ imageCategories, setImageCategories, observe, isElementVisible }),
-    [imageCategories, setImageCategories, observe, isElementVisible],
+    () => ({ category, setCategory, observe, isElementVisible }),
+    [category, setCategory, observe, isElementVisible],
   );
 
   return (

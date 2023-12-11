@@ -33,7 +33,6 @@ function Features() {
           sizes="(max-width: 480px) 100vw, (max-width: 1440px) 49vw,"
           alt="video poster"
           loading="lazy"
-          // className="h-64 lg:h-96"
           height="457"
           width="570"
         />
@@ -45,7 +44,6 @@ function Features() {
             sizes="(max-width: 480px) 100vw, (max-width: 1440px) 49vw,"
             alt="video poster"
             loading="lazy"
-            // className="h-64 lg:h-96"
             height="457"
             width="570"
           />

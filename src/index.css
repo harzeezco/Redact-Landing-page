@@ -28,7 +28,7 @@
 
 @layer components {
   body {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
   }
 
   .burger::after,

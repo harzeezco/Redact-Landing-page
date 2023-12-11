@@ -33,6 +33,7 @@ module.exports = {
     quotes: ["error", "double"],
     "linebreak-style": "off",
     "object-curly-newline": "off",
+    "react/jsx-no-bind": "off",
     "func-style": ["error", "declaration", { allowArrowFunctions: true }],
     "react-refresh/only-export-components": [
       "warn",

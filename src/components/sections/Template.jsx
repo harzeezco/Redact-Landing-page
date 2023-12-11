@@ -1,16 +1,20 @@
-/* eslint-disable operator-linebreak */
 import { useContext } from "react";
 
+import ErrorFallback from "../common/ErrorFallback";
 import TemplateImages from "@/components/common/TemplateImages";
 import Button from "@/components/global/Button";
 import { ImagesContext } from "@/contexts/ImagesContext";
 import Container from "@/layout/Container";
 import { CATEGORIES } from "@/lib/data";
 import mergeClasses from "@/lib/utils";
+import { ErrorBoundary } from "react-error-boundary";
 
 function Template() {
-  const { setImageCategories, imageCategories, observe } =
-    useContext(ImagesContext);
+  const { setCategory, category, observe } = useContext(ImagesContext);
+
+  function handleErrorReset() {
+    setCategory("Recommended");
+  }
 
   return (
     <section ref={observe} id="template">
@@ -20,25 +24,30 @@ function Template() {
         </h1>
 
         <div className="slides mx-auto mt-4  gap-4 lg:flex">
-          {CATEGORIES.map((category) => (
-            <div key={category.id} className="relative">
+          {CATEGORIES.map((details) => (
+            <div key={details.id} className="relative">
               <button
                 type="button"
                 className={mergeClasses(
-                  category.label === imageCategories
+                  details.label === category
                     ? "activeLink relative inline-block bg-transparent text-lg"
                     : "",
                   "underlineLink whitespace-nowrap",
                 )}
-                onClick={() => setImageCategories(category.label)}
+                onClick={() => setCategory(details.label)}
               >
-                {category.label}
+                {details.label}
               </button>
             </div>
           ))}
         </div>
 
-        <TemplateImages />
+        <ErrorBoundary
+          FallbackComponent={ErrorFallback}
+          onReset={handleErrorReset}
+        >
+          <TemplateImages />
+        </ErrorBoundary>
 
         <div className="mt-14 flex justify-center">
           <Button btnType="primary">Create a video</Button>
